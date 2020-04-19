@@ -4,7 +4,7 @@ import {startOfHour} from 'date-fns';
 import {getCustomRepository} from 'typeorm';
 
 interface Request {
-    provider: string;
+    provider_id: string;
     date: Date;
 }
 
@@ -23,7 +23,7 @@ class CreateAppointmentService {
         }
 
         const appointment = appointmentsRepository.create({
-            provider: data.provider,
+            provider_id: data.provider_id,
             date: appointmentDate
         });
 
